@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dominium Hotel Agadir</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="../css/style.css" rel="stylesheet">
+	<!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+	
+	<!--Header-Menü-Start-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="../html/index.html">
+				<img src="../img/videos-und logo/logo-c.png" alt="Logo" class="d-inline-block align-text-top">
+			</a>
+
+			<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+				class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="../html/index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../html/Rooms.html">Rooms</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../html/Restaurant.html">Restaurant</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../html/Spa.html">Spa</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../html/About.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../html/Contact.html">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a class="appbtn" href="../html/reservierung-details.html">Checkavailability</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--Header-Menü-End-->
+
+
+	<!--carousel-Start-->
+	<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleCaptions">
+		<div class="carousel-indicators">
+			<button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleCaptions"
+				type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1"
+				data-bs-target="#carouselExampleCaptions" type="button"></button> <button aria-label="Slide 3"
+				data-bs-slide-to="2" data-bs-target="#carouselExampleCaptions" type="button"></button>
+		</div>
+		<div class="carousel-inner">
+			<video playsinline="playsinline" muted="muted" autoplay="autoplay" loop="loop" width="100%">
+				<source src="../img/videos-und logo/dominium-hotel-agadir.mp4" type="video/mp4">
+			</video>
+
+			<div class="carousel-item active">
+				<div class="carousel-caption">
+					<h5 class="animated fadeInDown" style="animation-delay: 1s">Experienced Doctors</h5>
+					<p class="animated fadeInUp d-none d-md-block" style="animation-delay: 2s">Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Maxime tempore quis esse quidem fugiat cum.</p>
+					<p class="animated fadeInUp" style="animation-delay: 3s"><a href="#">Checkavailability</a></p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="carousel-caption">
+					<h5 class="animated fadeInDown" style="animation-delay: 1s">Modern Machineries</h5>
+					<p class="animated fadeInUp d-none d-md-block" style="animation-delay: 2s">Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Maxime tempore quis esse quidem fugiat cum.</p>
+					<p class="animated fadeInUp" style="animation-delay: 3s"><a href="#">Checkavailability</a></p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<div class="carousel-caption">
+					<h5 class="animated fadeInDown" style="animation-delay: 1s">24 / 7 Services</h5>
+					<p class="animated fadeInUp d-none d-md-block" style="animation-delay: 2s">Lorem ipsum dolor sit amet
+						consectetur adipisicing elit. Maxime tempore quis esse quidem fugiat cum.</p>
+					<p class="animated fadeInUp" style="animation-delay: 3s"><a href="#">Checkavailability</a></p>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleCaptions"
+			type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span
+				class="visually-hidden">Previous</span></button> <button class="carousel-control-next" data-bs-slide="next"
+			data-bs-target="#carouselExampleCaptions" type="button"><span aria-hidden="true"
+				class="carousel-control-next-icon"></span> <span class="visually-hidden">Next</span></button>
+	</div>
+
+	<!--carousel-End-->
+
+	<!-- bool-form-Start -1-->
+
+  <div class="HeaderSearch">
+		
+	
+		<div class="HeaderSearchItem">
+			<input type="text" id="datePicker" placeholder="Select Date Range" class="HeaderSearchInput" />
+		</div>
+		
+	
+		<div class="HeaderSearchItem">
+			<span class="HeaderSearchText" id="headerSearchText">
+				Adult: <span class="adultCounter">1</span> 
+				Children: <span class="childrenCounter">0</span> 
+				Rooms: <span class="roomsCounter">1</span>
+			</span>
+			<div class="options">
+				<div class="optionItem">
+					<span class="adultCounterButton" onclick="updateCounter(this, 1, 1, '.adultCounter')">Adult</span>
+					<div class="optionCounter">
+						<button class="optionCounterButton" onclick="updateCounter(this, -1, 1, '.adultCounter')">-</button>
+						<span class="optionCounterNumber">1</span>
+						<button class="optionCounterButton" onclick="updateCounter(this, 1, 1, '.adultCounter')">+</button>
+					</div>
+				</div>
+				<div class="optionItem">
+					<span class="childrenCounterButton" onclick="updateCounter(this, 1, 0, '.childrenCounter')">Children</span>
+					<div class="optionCounter">
+						<button class="optionCounterButton" onclick="updateCounter(this, -1, 0, '.childrenCounter')">-</button>
+						<span class="optionCounterNumber">0</span>
+						<button class="optionCounterButton" onclick="updateCounter(this, 1, 0, '.childrenCounter')">+</button>
+					</div>
+				</div>
+				<div class="optionItem">
+					<span class="roomsCounterButton" onclick="updateCounter(this, 1, 1, '.roomsCounter')">Rooms</span>
+					<div class="optionCounter">
+						<button class="optionCounterButton" onclick="updateCounter(this, -1, 1, '.roomsCounter')">-</button>
+						<span class="optionCounterNumber">1</span>
+						<button class="optionCounterButton" onclick="updateCounter(this, 1, 1, '.roomsCounter')">+</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="HeaderSearchItem">
+			<button class="HeaderBtn">Checkavailability</button>
+		</div>
+	</div>
+	
+<!-- bool-form-End-1-->
+
+
+	<!-- Willkommenssektion- Start -->
+	<section class="welcome-content">
+		<h2>Willkommen im Dominium Hotel Agadir</h2>
+		<p>Genießen Sie Luxus und Entspannung in unserem einzigartigen Hotel. Entdecken Sie die besonderen Merkmale, den
+			Komfort und die Gastfreundschaft, die Ihren Aufenthalt unvergesslich machen.</p>
+		<div class="separator"></div>
+	</section>
+	<!-- Willkommenssektion-End-->
+
+	<!-- Spa-Rooms-Restaurant-sektion-Start-->
+	<section class="feature-section">
+		<div class="single-page">
+			<a href="../html/Spa.html">
+				<img src="../img/img7.jpg" alt="Spa">
+				<h2>Spa</h2>
+				<p>Erholen Sie sich und entspannen Sie sich in unserem luxuriösen Spa mit einer breiten Palette von
+					Wellness-Angeboten.</p>
+			</a>
+		</div>
+		<div class="single-page">
+			<a href="../html/Rooms.html">
+				<img src="../img/img1.jpg" alt="Rooms">
+				<h2>Rooms</h2>
+				<p>Entdecken Sie unsere komfortablen Zimmer und Suiten, die perfekte Wahl für einen angenehmen Aufenthalt.</p>
+			</a>
+		</div>
+		<div class="single-page">
+			<a href="../html/Restaurant.html">
+				<img src="../img/img3.jpg" alt="Restaurant">
+				<h2>Restaurant</h2>
+				<p>Genießen Sie kulinarische Köstlichkeiten in unserem erstklassigen Restaurant mit einer Vielzahl von
+					Gerichten.</p>
+			</a>
+		</div>
+	</section>
+	<!-- Spa-Rooms-Restaurant-sektion-End-->
+
+	<div class="separator"></div>
+	<!--service-section-Start-->
+	<section id="main-service-section">
+		<h2>Dominium Hotel Agadir</h2>
+		
+		<div id="main-service">
+			<h2>Dominium Hotel<span class="yellow-stars">★★★★</span></h2>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint quis dolores, ipsa quae voluptatem ipsam iure
+				accusamus</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, amet fugit! Tempore, minima quidem, sequi sunt,
+				iste facere delectus pariatur dolores quis accusamus amet unde recusandae mollitia dicta eum hic! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit recusandae iure necessitatibus omnis maxime esse error est, itaque magni. Aliquam tempora molestiae autem eius natus fugit illum enim, aspernatur provident!</p>
+		</div>
+		<div id="Fantastique">
+			<h3 id="titre-service">Fantastique 8.5</h3>
+			<p>15 awis</p>
+		</div>
+		<div id="service-card">
+			<div id="card"><iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.20594015226!2d-9.595499119303652!3d30.40189843644896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b715f7dd15d3%3A0xc3268ac742671aa4!2sH%C3%B4tel%20Dominium!5e0!3m2!1sde!2sde!4v1705162923060!5m2!1sde!2sde"
+					width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+			
+			<div id="Excellent">
+				<p><b>Location rating score</b></p>
+				<p>🌟 Excellent location - 920 meters to the beach</p>
+				<div>
+					<h6>Closest landmarks</h6>
+					<p>🎡 La Grande Roue Agadir	570 m</p>
+					<p> 🏖️ Agadir Beach  920 m</p>
+					<p>🛍️ Souk El Had d'Agadir  1.5 km</p>
+					<p>🏠 Moroccan Original Carpet  	1.6 km</p>
+					<p> 🎭 Theatre de Verdure 		1.7 km</p>
+				</div>
+
+			</div>
+		</div>
+		<div id="icon-service">
+			<h3 id="titre-service">Piont forts</h3>
+			<div class="icon-container">
+				<i class="fas fa-star"></i>
+				<p>Sparkling clean</p>
+			</div>
+
+			<div class="icon-container">
+				<i class="fas fa-heart"></i>
+				<p>Front desk [24-hour]</p>
+			</div>
+
+			<div class="icon-container">
+				<i class="fas fa-check-circle"></i>
+				<p>Airport transfer</p>
+			</div>
+
+			<div class="icon-container">
+				<i class="fas fa-smile"></i>
+				<p>920 meters to the beach</p>
+			</div>
+
+			<div class="icon-container">
+				<i class="fas fa-thumbs-up"></i>
+				<p>Free Wi-Fi in all rooms!</p>
+			</div>
+		</div>
+		<div id="equipment-service">
+			<h3 id="titre-service">Equipments</h3>
+			<p>✔️ Airport transfer </p>
+			<p>✔️ Car park</p>
+			<p>✔️ Free Wi-Fi in all rooms!</p>
+			<p>✔️ Front desk [24-hour]</p>
+			<p>✔️ Golf course [on-site]</p>
+			<p>✔️ Fitness center</p>
+			<p>✔️ Check-in/out [express]</p>
+			<p>✔️ Luggage storage</p>
+
+		</div>
+		</div>
+	</section>
+
+	<!--service-section-End-->
+
+
+	<!-- Gallery und testimonial--Start -->
+	
+	<div class="main-section">
+		<div class="gallery">
+			<img src="../img/img4.jpg" alt="Image 1" class="active">
+			<img src="../img/img2.jpg" alt="Image 2" class="active">
+			<img src="../img/img8.jpg" alt="Image 3" class="active">
+		</div>
+		<div class="testimonials">
+			<h2>Testimonials</h2>
+			<ul class="testimonial-list">
+				<li class="testimonial-item active">
+					<p>"I love this product! It has made my life so much easier."</p>
+					<p>- Jane Doe</p>
+				</li>
+				<li class="testimonial-item">
+					<p>"This is the best product I have ever used. I highly recommend it."</p>
+					<p>- John Smith</p>
+				</li>
+				<li class="testimonial-item">
+					<p>"I don't know how I ever lived without this product. It's amazing!"</p>
+					<p>- Sarah Johnson</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- Gallery und testimonial--End -->
+
+	
+
+	
+
+
+	<!-- Hier kannst du den Rest deiner Webseite einfügen -->
+
+	<!--footer-section-->
+
+	<footer>
+    <div class="containerr">
+        <div class="footer-col">
+            <h2 id="footerLogo" ><a class="navbar-brand" href="../html/index.html">
+							<img src="../img/videos-und logo/logo-c.png" alt="Logo" >
+						</a></h2>
+            <p class="footer-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt labore quod ipsa eos magnam? Architecto quas magnam mollitia nemo
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3 class="text-office">
+                Office
+                <div class="underline"><span></span></div>
+            </h3>
+            <p>Street No 5</p>
+            <p>Gulistan Colony</p>
+            <p>Faisalabad Punjab, Pakistan</p>
+
+            <p class="email">info.finegap@gmail.com</p>
+            <p class="phone">+92 304 110 0028</p>
+        </div>
+        <div class="footer-col">
+            <h3>
+                Menu
+                <div class="underline"><span></span></div>
+            </h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </div>
+        <div class="footer-col"  id="Newsletter">
+            <h3>
+                Newsletter
+                <div class="underline"><span></span></div>
+            </h3>
+            <form action="">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="Enter Company Email">
+                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+            </form>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+	<!--footer-section-End -->
+
+
+
+	<!-- Bootstrap JS und Popper.js hinzufügen -->
+	
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+  
+		<!-- Flatpickr JS -->
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> 
+
+  <script src="../JS/script.js"></script>
+   <script src="../JS/Gallery.js"></script>
+
+
+</body>
+
+</html>

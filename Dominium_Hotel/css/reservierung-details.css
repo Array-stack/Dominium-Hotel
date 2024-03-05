@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+  /*-- bool-form-Start -1--*/
+.HeaderSearch {
+    position: relative;
+    align-items: center;
+    width: 75%;
+    left: 200px;
+    height: 60px;
+    background-color: #7a6355;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+    border-radius: 5px;
+    bottom: 0px;
+    z-index: 1;
+  
+  }
+  .HeaderSearchItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .headerSearchInput {
+    border: none;
+    outline: none;
+  }
+   .HeaderSearchText {
+    color: white;
+    cursor: pointer;
+  }
+  .HeaderBtn{
+      background: #413725;
+      width: 200px;
+      border-radius: 4px;
+      color: #fff;
+      text-decoration: none;
+  }
+  .options {
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  }
+  .optionItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+  }
+  .optionCounter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: black;
+  }
+  .optionCounterButton {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #7a6355;
+    color: #7a6355;
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  /* Media Query für Mobilgeräte */
+  @media only screen and (max-width: 768px) {
+    .HeaderSearch {
+      background-color: transparent;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column; /* Ändere die Richtung auf Spalte für Mobilgeräte */
+      width: 45%;
+      margin-top: 90px;
+      left: 30%;
+      padding: 5px;
+    }
+    .headerSearchInput {
+      background-color: transparent;
+      border-radius: 5px;
+    }
+    .HeaderSearchItem{
+      margin-bottom: 5px;
+    }
+    .HeaderSearchText{
+      border: 1px solid #7a6355;
+      border-radius: 5px;
+    }
+    .HeaderBtn{
+      margin-top: 5px;
+      border-style: none;
+    }
+    .options{
+      margin-top: 15px;
+    }
+   
+  
+  }
+  
+  /*-- bool-form-End -1--*/
+
+
+

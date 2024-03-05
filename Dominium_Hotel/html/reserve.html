@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    /*-- bool-form-Start -1--*/
+.container-fluid {
+  padding: 10px 10; /* den oberen und unteren Abstand nach Bedarf anpassen */
+  background-color: #7a6355;
+  color: #fff;
+}
+
+.mb-3 {
+  padding: 0px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  border: none;
+}
+
+.form-control {
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.btn {
+  height: 55px; /* die Höhe des Buttons auf den gleichen Wert wie die Eingabefelder */
+  width: 200px;
+  background-color: #413725;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+/* Mobile Optimierung-form-1- */
+@media screen and (max-width: 768px) {
+  .container-fluid {
+    padding: 0px 0px; /* Reduziere den Raum für kleinere Bildschirme */
+  }
+
+  .form-control,
+  .mb-3 {
+    width: 100%;
+  }
+}
+/*-- bool-form-End -1--*/
+  </style>
+  <!-- bool-form-Start -1-->
+	<div class="container-fluid mt-auto">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<form class="d-flex flex-wrap p-3">
+					<div class="mb-3">
+						<label for="checkin" class="form-label">Check-in Date</label>
+						<input type="date" class="form-control" id="checkin">
+					</div>
+
+					<div class="mb-3">
+						<label for="checkout" class="form-label">Check-out Date</label>
+						<input type="date" class="form-control" id="checkout">
+					</div>
+
+					<div class="mb-3">
+						<label for="adults" class="form-label">Number of Adults</label>
+						<input type="number" class="form-control" id="adults" min="1" value="1">
+					</div>
+
+					<div class="mb-3">
+						<label for="children" class="form-label">Number of Children</label>
+						<input type="number" class="form-control" id="children" min="0" value="0">
+					</div>
+
+					<div class="mb-3">
+						<label for="rooms" class="form-label">Number of Rooms</label>
+						<input type="number" class="form-control" id="rooms" min="1" value="1">
+					</div>
+
+					<div class="mb-3"><button type="submit" class="btn btn-primary mt-3">Check Availability</button></div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- bool-form-End-1-->
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Section Generator</title>
+    <style>
+        /* Stile für die Services-Section, kann nach Bedarf angepasst werden */
+        .services-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .service {
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+footer{
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    border-top-left-radius: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer *{
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 7%;
+}
+
+.footer-col{
+    width: 25%;
+}
+
+.footer-col h2{
+    font-optical-sizing: 1.7em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p.email{
+    margin: 30px 0;
+}
+
+p.phone{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.footer-col .text-office{
+    margin-bottom: 20px;
+}
+.underline{
+    width: 70px;
+    height: 3px;
+    position: relative;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.underline span{
+    width: 7px;
+    height: 100%;
+    position: absolute;
+    left: 10px;
+    background-color: rgb(63,63,63);
+    border-radius: 3px;
+    animation: moving 1.5s linear infinite;
+}
+
+@keyframes moving {
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.footer-col ul{
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+.footer-col ul li{
+    margin: 10px;
+}
+
+.footer-col form{
+    margin-top: 20px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.footer-col form input{
+    width: 70%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.footer-col form i{
+    font-size: 15px;
+}
+
+.footer-col .social-icons{
+    margin-top: 20px;
+}
+
+.footer-col .social-icons i{
+    padding: 10px;
+    background-color: white;
+    color: #00093c;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.footer-para{
+    max-width: 250px;
+}
+
+    </style>
+</head>
+<body>
+
+    
+
+<footer>
+    <div class="container">
+        <div class="footer-col">
+            <h2>Logo</h2>
+            <p class="footer-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt labore quod ipsa eos magnam? Architecto quas magnam mollitia nemo
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3 class="text-office">
+                Office
+                <div class="underline"><span></span></div>
+            </h3>
+            <p>Street No 5</p>
+            <p>Gulistan Colony</p>
+            <p>Faisalabad Punjab, Pakistan</p>
+
+            <p class="email">info.finegap@gmail.com</p>
+            <p class="phone">+92 304 110 0028</p>
+        </div>
+        <div class="footer-col">
+            <h3>
+                Menu
+                <div class="underline"><span></span></div>
+            </h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>
+                Newsletter
+                <div class="underline"><span></span></div>
+            </h3>
+            <form action="">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="Enter Company Email">
+                <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+            </form>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-col p {
+  color: #fff;
+}
+footer .containerr{
+    background-color: black;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+}
+.footer-col ul{
+    list-style: none;
+}
+
+.footer-col h4{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 22px;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-col h4::before{
+    content: '';
+    width: 70px;
+    height: 2px;
+    position: absolute;
+    background-color: #7a6355;
+    bottom: -10px;
+}
+
+.footer-col ul li{
+    padding: 10px 0;
+}
+.footer-col ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footer-col ul li a:hover{
+    opacity: 1;
+}
+.footer-col input{
+    border: none;
+    width: 250px;
+    height: 45px;
+    display: block;
+    padding-left: 20px;
+    margin: 14px 0;
+}
+
+.footer-col .inputSubmit{
+    padding: 0px 20px;
+    background-color: #7a6355;
+    border: none;
+    color: white;
+}
+.col p{
+    color: white;
+}
+.row hr{
+    opacity: 0.7;
+}
+
+.row .socialIcons i{
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin: 0 15px;
+    transition: 0.5s;
+}
+
+.row .socialIcons i:hover{
+    color: #e91e64;
+}
+
+@media (max-width: 600px){
+    footer .row{
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    footer .footer-col ul{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .footer-col input{
+        width: 100%;
+    }
+}
+  </style>
+  <footer>
+    <div class="containerr">
+        <div class="row">
+            <div class="footer-col">
+              <img src="../img/videos-und logo/logo-w.png" alt="Logo">
+                <p>Lorem ipsum dolor sit, amet <br>consectetur adipisicing elit. <br> Rerum beatae assumenda vitae<br> necessitatibus minus ea quibu</p>
+            </div>
+
+            <!-- 2nd Column -->
+            <div class="footer-col">
+                <h4>Properties</h4>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact US</a></li>
+                    <li><a href="">Team</a></li>
+                    <li><a href="">Our History</a></li>
+                </ul>
+            </div>
+
+            <!-- 3rd Column -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="">API Integration</a></li>
+                    <li><a href="">Web Development</a></li>
+                    <li><a href="">Mobile Development</a></li>
+                    
+                </ul>
+            </div>
+
+            <!-- 3th Column -->
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form action="">
+                    <input type="text" placeholder="Your Name" class="inputName">
+                    <input type="email" placeholder="Enter Company Email" class="inputEmail">
+                    <input type="submit" value="Submit" class="inputSubmit">
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p>&#169; 2024 Viralogie. All Rights Reserved.</p>
+            </div>
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

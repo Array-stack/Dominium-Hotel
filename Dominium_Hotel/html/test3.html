@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+  <link rel = "icon" href = "images/logo.png" type = "image/png">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Document</title>
+</head>
+<style>
+  /*containers Galerie */
+.containers {
+  margin: 0 44%;
+  
+}
+
+.spezifische-sektion {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  min-height: 100vh;
+  transform-style: preserve-3d;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 10%,
+    #33302e 10%,
+    #4f453f 90%,
+    transparent 10%,
+    transparent 100%
+  );
+}
+
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: 1.5s;
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px) translateY(40px);
+  -webkit-box-reflect: below 0px
+    linear-gardient(transparent, transparent, #0004);
+}
+
+.box span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25vh;
+  height: 30vh;
+  object-fit: cover;
+  user-select: none;
+}
+
+.btns {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  gap: 30px;
+}
+
+.btns .btn {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btns .btn:active {
+  background: #fff;
+}
+.btns .btn::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg) translate(-2.5px, 2.5px);
+}
+.btns .btn.prev::before {
+  transform: rotate(225deg) translate(-2.5px, 2.5px);
+}
+.btns .btn:active::before {
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+}
+
+.caption {
+  position: absolute;
+  background-color: transparent(0, 0, 0, 0.5);
+  bottom: 190px;
+  left: 0;
+  right: 0;
+  color: #fff; /* Textfarbe der Beschriftung */
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/*containers Galerie-End */
+
+</style>
+<body>
+    <!-- Willkommenssektion -->
+    <div class="spezifische-sektion">
+        <section class="welcome-section">
+          <div class="welcome-content">
+            <h2>Willkommen im Dominium Hotel Agadir</h2>
+            <p>
+              Genießen Sie Luxus und Entspannung in unserem einzigartigen Hotel.
+              Entdecken Sie die besonderen Merkmale, den Komfort und die
+              Gastfreundschaft, die Ihren Aufenthalt unvergesslich machen.
+            </p>
+            <div class="separator"></div>
+          </div>
+        </section>
+    <div class="containers">
+        <div class="box">
+          <span style="--i: 1">
+            <a href="zielbild1.html" class="image-link">
+              <div class="image-container">
+                <img src="../img/img1.jpg" alt="Bild 1" />
+                <div class="caption">Titel für Bild 1</div>
+              </div>
+            </a>
+          </span>
+          <span style="--i: 2">
+            <a href="zielbild2.html" class="image-link">
+              <div class="image-container">
+                <img src="../img/img2.jpg" alt="Bild 2" />
+                <div class="caption">Titel für Bild 2</div>
+              </div>
+            </a>
+          </span>
+          <span style="--i: 3">
+            <a href="zielbild3.html" class="image-link">
+              <div class="image-container">
+                <img src="../img/img3.jpg" alt="Bild 3" />
+                <div class="caption">Titel für Bild 3</div>
+              </div>
+            </a>
+          </span>
+          <span style="--i: 4">
+            <a href="zielbild4.html" class="image-link">
+              <div class="image-container">
+                <img src="../img/img4.jpg" alt="Bild 4" />
+                <div class="caption">Titel für Bild 4</div>
+              </div>
+            </a>
+          </span>
+          <span style="--i: 5">
+            <a href="zielbild5.html" class="image-link">
+              <div class="image-container">
+                <img src="../img/img5.jpg" alt="Bild 5" />
+                <div class="caption">Titel für Bild 5</div>
+              </div>
+            </a>
+          </span>
+          <span style="--i: 6">
+            <a href="zielbild6.html" class="image-link">
+              <div class="image-container">
+                <img src="../img/img6.jpg" alt="Bild 6" />
+                <div class="caption">Titel für Bild 6</div>
+              </div>
+            </a>
+          </span>
+          <span style="--i: 7">
+            <a href="zielbild7.html" class="image-link">
+              <div class="image-container">
+                <img src="../img/img7.jpg" alt="Bild 7" />
+                <div class="caption">Titel für Bild 7</div>
+              </div>
+            </a>
+          </span>
+          <span style="--i: 8">
+            <a href="zielbild8.html" class="image-link">
+              <div class="image-container">
+                <img src="../img/img8.jpg" alt="Bild 8" />
+                <div class="caption">Titel für Bild 8</div>
+              </div>
+            </a>
+          </span>
+        </div>
+        <div class="btns">
+          <div class="btn prev"></div>
+          <div class="btn next"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Willkommenssektion-End-->
+    <script src="../JS/script.js"></script>
+  
+</body>
+</html>

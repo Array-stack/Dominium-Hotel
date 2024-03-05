@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    /*-- bool-form-Start -1--*/
+.HeaderSearch {
+  position: absolute;
+  align-items: center;
+  width: 75%;
+  left: 200px;
+  height: 60px;
+  background-color: #413725;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+  border-radius: 5px;
+  bottom: 500px;
+  z-index: 1;
+
+}
+.HeaderSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.headerSearchInput {
+  border: none;
+  outline: none;
+}
+ .HeaderSearchText, .HeaderSearchDate {
+  color: white;
+  cursor: pointer;
+}
+
+.options {
+  
+  position: absolute;
+  top: 100px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+.optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+  </style>
+
+  <!-- bool-form-Start -1-->
+  <div class="HeaderSearch">
+		<div class="HeaderSearchItem">
+			<input type="text" placeholder="where are you going" class="HeaderSearchInput" />
+		</div>
+	
+		<div class="HeaderSearchItem">
+			<span class="HeaderSearchText" >Date To Date</span>
+		</div>
+	
+		<div class="HeaderSearchItem" >
+			<span class="HeaderSearchText" id="headerSearchText" >
+				Adult: <span class="adultCounter">1</span> 
+				Children: <span class="childrenCounter">0</span> 
+				Rooms: <span class="roomsCounter">1</span>
+			</span>
+			<div class="options" >
+				<div class="optionItem">
+					<span class="adultCounterButton" onclick="updateCounter(this, 1, 1, '.adultCounter')">Adult</span>
+					<div class="optionCounter">
+						<button class="optionCounterButton" onclick="updateCounter(this, -1, 1, '.adultCounter')">-</button>
+						<span class="optionCounterNumber">1</span>
+						<button class="optionCounterButton" onclick="updateCounter(this, 1, 1, '.adultCounter')">+</button>
+					</div>
+				</div>
+				<div class="optionItem">
+					<span class="childrenCounterButton" onclick="updateCounter(this, 1, 0, '.childrenCounter')">Children</span>
+					<div class="optionCounter">
+						<button class="optionCounterButton" onclick="updateCounter(this, -1, 0, '.childrenCounter')">-</button>
+						<span class="optionCounterNumber">0</span>
+						<button class="optionCounterButton" onclick="updateCounter(this, 1, 0, '.childrenCounter')">+</button>
+					</div>
+				</div>
+				<div class="optionItem">
+					<span class="roomsCounterButton" onclick="updateCounter(this, 1, 1, '.roomsCounter')">Rooms</span>
+					<div class="optionCounter">
+						<button class="optionCounterButton" onclick="updateCounter(this, -1, 1, '.roomsCounter')">-</button>
+						<span class="optionCounterNumber">1</span>
+						<button class="optionCounterButton" onclick="updateCounter(this, 1, 1, '.roomsCounter')">+</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="HeaderSearchItem">
+			<button class="HeaderBtn">Search</button>
+		</div>
+	</div>
+	
+<!-- bool-form-End-1-->
+
+<script>
+  // Definition der Funktion updateCounter
+  function updateCounter(button, value, minValue, counterClass) {
+      var optionCounter = button.closest('.optionCounter');
+      if (!optionCounter) {
+          console.error('Fehler: optionCounter nicht gefunden');
+          return; // Wenn das Element nicht gefunden wird, die Funktion beenden
+      }
+
+      var counterNumber = optionCounter && optionCounter.querySelector('.optionCounterNumber');
+      if (!counterNumber) {
+          console.error('Fehler: Counter-Nummer nicht gefunden');
+          return; // Wenn das Element nicht gefunden wird, die Funktion beenden
+      }
+
+      var currentValue = parseInt(counterNumber.textContent) || 0;
+      var newValue = Math.max(minValue, currentValue + value);
+
+      console.log('Counter Nummer vor Aktualisierung:', currentValue);
+      console.log('Neuer Wert:', newValue);
+
+      counterNumber.textContent = newValue;
+
+      // Aktualisiere den Text im HeaderSearchText-Span nur, wenn erforderlich
+      if (updateHeaderText()) {
+          console.log('Header Text nach Counter Aktualisierung:', document.querySelector('.HeaderSearchText').textContent);
+
+          // Aktualisiere den entsprechenden Counter im Text
+          var counterElement = document.querySelector(counterClass);
+          if (counterElement) {
+              counterElement.textContent = newValue;
+          }
+      }
+  }
+
+         // Definition der Funktion updateHeaderText
+function updateHeaderText() {
+  var headerSearchText = document.querySelector('.HeaderSearchText');
+  if (!headerSearchText) {
+    console.error('Fehler: headerSearchText nicht gefunden');
+    return false;
+  }
+
+ 
+
+  var adultCounterElement = document.querySelector('.adultCounter');
+  var childrenCounterElement = document.querySelector('.childrenCounter');
+  var roomsCounterElement = document.querySelector('.roomsCounter');
+
+  if (!adultCounterElement || !childrenCounterElement || !roomsCounterElement) {
+    console.error('Fehler: Counter-Element nicht gefunden');
+    return false;
+  }
+
+  var adultCounter = adultCounterElement.textContent;
+  var childrenCounter = childrenCounterElement.textContent;
+  var roomsCounter = roomsCounterElement.textContent;
+
+  var newText = 'Adult:' + adultCounter + ' Children:' + childrenCounter + ' Rooms:' + roomsCounter;
+
+  if (headerSearchText.textContent !== newText) {
+    console.log('Header Text vor Aktualisierung:', headerSearchText.textContent);
+    
+    // Überprüfen, ob es sich um "Date To Date" handelt, und aktualisieren Sie nur, wenn nicht
+    if (headerSearchText.textContent !== 'Date To Date') {
+      headerSearchText.textContent = newText;
+    }
+    
+    console.log('Header Text nach Aktualisierung:', headerSearchText.textContent);
+    
+    return true;
+  }
+
+  return false;
+}
+
+ 
+      // Beispielaufrufe für die Counter-Buttons
+      document.querySelector('.adultCounterButton').addEventListener('click', function () {
+          console.log('Adult Counter Button geklickt');
+          updateCounter(this, 1, 1, '.adultCounter');
+      });
+
+      document.querySelector('.childrenCounterButton').addEventListener('click', function () {
+          console.log('Children Counter Button geklickt');
+          updateCounter(this, 1, 0, '.childrenCounter');
+      });
+
+      document.querySelector('.roomsCounterButton').addEventListener('click', function () {
+          console.log('Rooms Counter Button geklickt');
+          updateCounter(this, 1, 1, '.roomsCounter');
+      });
+
+      document.getElementById('headerSearchText').addEventListener('click', function () {
+          var options = document.querySelector('.options');
+          options.style.display = (options.style.display === 'block') ? 'none' : 'block';
+      });
+      
+      
+    </script>
+
+      
+  
+</body>
+</html>
+
+
+
+
